@@ -1,0 +1,9 @@
+*
+!*.cpp
+!*.sh
+!LICENSE
+!README.md
+!.gitattributes
+!.gitignore
+!.gitkeep
+!*/
