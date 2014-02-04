@@ -58,7 +58,7 @@ struct TheBestName {
 			v.eb(a == "JOHN" ? big : sum(a), a);
 		}
 		sr(v);
-		ei(a, v) names[ai] = a.second;
+		ei(a, v) names[ai] = g(a,1);
 		return names;
 	}
 };
