@@ -56,7 +56,7 @@ struct ContiguousSubsequences {
 				n += x[i];
 			}
 			double f = double(n) / (bi - ai + 1);
-			if (mx < f) {
+			if (mx <= f && ai < aii) {
 				mx = f;
 				aii = ai;
 				bii = bi;
