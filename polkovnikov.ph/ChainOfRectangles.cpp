@@ -50,9 +50,11 @@ struct ChainOfRectangles {
 	int getMaximalArea(vector <int> width, vector <int> height, string color) {
 		int ps = 0;
 		int total[3] = {};
+		rev(width);
+		rev(height);
+		rev(color);
 		ei(w, width) {
 			int s = w * height[wi];
-			cout << color[wi] << ' ' << s - ps << endl;
 			total[string("RGB").find(color[wi])] += s - ps;
 			ps = s;
 		}
