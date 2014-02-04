@@ -48,12 +48,10 @@ using namespace std;
 
 struct Prank {
 	vector <int> realWeight(int g) {
-		const int q = sqrt(g);
+		const int q = g;
 		vector<int> r;
 		int c = 0;
 		for (int i = 1; i <= q; ++i) for (int j = i; j <= q; ++j) {
-			cout << i << ' ' << j << endl;
-			if (c++ > 100) break;
 			if (j * j - i * i != g) continue;
 			r.eb(j);
 		}
