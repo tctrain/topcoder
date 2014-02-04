@@ -50,8 +50,8 @@ struct AzimuthMonitoring {
 	int getAzimuth(vector <string> in) {
 		int c = 0;
 		ei(a, in) {
-			if (a == "LEFT") c += 90;
-			else if (a == "RIGHT") c -= 90;
+			if (a == "LEFT") c -= 90;
+			else if (a == "RIGHT") c += 90;
 			else if (a == "TURN AROUND") c += 180;
 			else if (a == "HALT") break;
 			else {
@@ -59,7 +59,7 @@ struct AzimuthMonitoring {
 				ss << a;
 				string u; int v;
 				ss >> u >> v;
-				c += u == "LEFT" ? v : -v;
+				c += u == "LEFT" ? -v : v;
 			}
 		}
 		return (c % 360 + 360) % 360;
