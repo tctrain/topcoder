@@ -54,6 +54,7 @@ struct AlmostPrimeNumbers {
 			for (int j = 2; j < i; ++j) {	
 				if (i % j == 0) {
 					prime = false;
+					cout << i << ' ' << j << endl;
 					if (j <= 10) nosmall = false;
 				}
 			}
