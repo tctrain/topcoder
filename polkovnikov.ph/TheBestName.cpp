@@ -59,6 +59,7 @@ struct TheBestName {
 		}
 		std::sort(all(v)); // FUCK TOPCODER
 		ei(a, v) names[ai] = a.second;
+		rev(names);
 		return names;
 	}
 };
