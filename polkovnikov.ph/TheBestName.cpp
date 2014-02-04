@@ -48,7 +48,7 @@ using namespace std;
 
 struct TheBestName {
 	vector <string> sort(vector <string> names) {
-		vt(int, string) v;
+		vector<pair<int, string>> v;
 		auto sum = [](const string & s) {
 			int r = 0;
 			ei(a, s) r += a - 'A';
@@ -58,7 +58,7 @@ struct TheBestName {
 			v.eb(a == "JOHN" ? big : sum(a), a);
 		}
 		sr(v);
-		ei(a, v) names[ai] = g(a,1);
+		ei(a, v) names[ai] = s.second;
 		return names;
 	}
 };
