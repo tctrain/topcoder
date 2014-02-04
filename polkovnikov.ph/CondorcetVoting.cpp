@@ -57,11 +57,10 @@ struct CondorcetVoting {
 					if (k[i] < k[j]) ++c;
 					if (k[i] > k[j]) --c;
 				}
+				cout << i << " " << c << " " << j << endl;
 				if (c <= 0) {
 					f = false;
 					break;
-				} else {
-					cout << i << " preferred to " << j << endl;
 				}
 			}
 			if (f) return i;
