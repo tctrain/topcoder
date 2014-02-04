@@ -52,7 +52,7 @@ struct CondorcetVoting {
 		fr(i, cc) {
 			bool f = true;
 			fr(j, cc) {
-				ei(k, votes) if (k[i] < k[j]) {
+				ei(k, votes) if (k[i] <= k[j]) {
 					f = false;
 					break;
 				}
