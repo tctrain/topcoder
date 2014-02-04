@@ -53,7 +53,7 @@ struct ContiguousSubsequences {
 		ei(a, x) ei(b, x) if (ai < bi && bi - ai + 1 >= K) {
 			int n = 0;
 			for (int i = ai; i <= bi; ++i) {
-				n += a[i];
+				n += x[i];
 			}
 			double f = double(n) / (bi - ai + 1);
 			if (mx < f) {
