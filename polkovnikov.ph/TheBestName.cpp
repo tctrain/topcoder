@@ -50,7 +50,7 @@ struct TheBestName {
 	vector <string> sort(vector <string> names) {
 		auto sum = [](string const & s) {
 			int t = 0;
-			ei(a, s) t += a - 'A';
+			ei(a, s) t += a - 'A' + 1;
 			return t;
 		};
 		std::sort(all(names), [sum](const string & a, const string & b) {
@@ -58,7 +58,7 @@ struct TheBestName {
 			if (b == "JOHN") return false;
 			int d = sum(b) - sum(a);
 			if (d > 0) return false;
-			if (d< 0) return true;
+			if (d < 0) return true;
 			return a > b;
 		});
 		return names;
