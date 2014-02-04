@@ -23,7 +23,7 @@
 #include <array>
 #include <valarray>
 #define all(v)begin(v),end(v)
-#define dump(v)copy(all(v),ostream_iterator<decltype(*v.begin())>(cout,"\n"))
+#define dump(v)copy(all(v),ostream_iterator<decltype(*v.begin())>(cout," "))
 #define rg(i,a,b)for(int i=a,i##e=b;i<i##e;++i)
 #define fr(i,n)for(int i=0,i##e=n;i<i##e;++i)
 #define rf(i,n)for(int i=n-1;i>=0;--i)
@@ -55,6 +55,7 @@ struct Containers {
 			} else {
 				r[c] -= a;
 			}
+			dump(r); cout << endl;
 		}
 		int w = 0;
 		ei(a, r) w += a;
