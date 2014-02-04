@@ -50,7 +50,7 @@ struct TournamentsAmbiguityNumber {
 	int scrutinizeTable(vector <string> t) {
 		const int q = sz(t);
 		int c = 0;
-		fr(i, q) for (int j = i+1; j < q; ++j) for (int k = j+1; k < q; ++k) {
+		fr(i, q) fr(j, q) fr(k, q) {
 			if (t[i][j] == '1' && t[j][k] == '1' && t[k][i] == '1') {
 				++c;
 			}
