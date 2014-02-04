@@ -54,7 +54,7 @@ struct LuckyTicketSubstring {
 			for (int j = 0; j < q - i; ++j) {
 				int t = 0;
 				for (int k = j; k < j + i; ++k)
-					t += (j < i / 2 ? 1 : -1) * s[k];
+					t += (j < i / 2 ? 1 : -1) * (s[k] - '0');
 				if (t == 0)
 					mx = max(mx, i);
 			}
