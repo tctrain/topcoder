@@ -49,7 +49,7 @@ using namespace std;
 struct WhiteCells {
 	int countOccupied(vector <string> board) {
 		int c = 0;
-		ei(a, board) ei(b, a) if ((a + b) % 2 == 0 && b == 'F') ++c;
+		ei(a, board) ei(b, a) if ((ai + bi) % 2 == 0 && b == 'F') ++c;
 		return c;
 	}
 };
