@@ -59,7 +59,7 @@ struct ContiguousSubsequences {
 			v.eb(-f, -(bi - ai + 1), ai, bi);
 		}
 		sr(v);
-		return {g(v[]0,2), g(v[0],3)};
+		return {g(v[0],2), g(v[0],3)};
 	}
 };
 
