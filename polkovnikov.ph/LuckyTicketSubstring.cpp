@@ -48,7 +48,7 @@ using namespace std;
 
 struct LuckyTicketSubstring {
 	int maxLength(string s) {
-		const int q = 0;
+		const int q = sz(s);
 		int mx = 0;
 		for (int i = 0; i < q; ++i) for (int j = i + 2; j < q; ++j) if ((j - i) % 2 == 0) {
 			int m = (j - i) / 2;
