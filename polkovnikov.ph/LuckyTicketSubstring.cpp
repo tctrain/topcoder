@@ -55,7 +55,7 @@ struct LuckyTicketSubstring {
 			int t = 0;
 			for (int k = i; k < m; ++k) t += s[k] - '0';
 			for (int k = m; k < j; ++k) t -= s[k] - '0';
-			cout << t << endl;
+			cout << s.substr(i, j - i + 1) << ' ' << t << endl;
 			if (t == 0) mx = max(mx, j - i);
 		}
 		return mx;
