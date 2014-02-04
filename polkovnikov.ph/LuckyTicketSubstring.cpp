@@ -48,16 +48,14 @@ using namespace std;
 
 struct LuckyTicketSubstring {
 	int maxLength(string s) {
+		const int q = 0;
 		int mx = 0;
-		const int q = sz(s);
-		for (int i = 2; i <= sz(s); i += 2) {
-			for (int j = 0; j < q - i; ++j) {
-				int t = 0;
-				for (int k = j; k < j + i; ++k)
-					t += (j < i / 2 ? 1 : -1) * (s[k] - '0');
-				if (t == 0)
-					mx = max(mx, i);
-			}
+		for (int i = 0; i < q; ++i) for (int j = i + 2; j < q; ++j) if ((j - i) % 2 == 0) {
+			int m = (j - i) / 2;
+			int t = 0;
+			for (int k = i; k < m; ++k) t += s[k] - '0';
+			for (int k = m; k < j; ++k) t -= s[k] - '0';
+			if (t == 0) mx = max(mx, j - i);
 		}
 		return mx;
 	}
