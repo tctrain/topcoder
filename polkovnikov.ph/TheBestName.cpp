@@ -57,7 +57,7 @@ struct TheBestName {
 		ei(a, names) {
 			v.eb(a == "JOHN" ? big : sum(a), a);
 		}
-		sr(v);
+		std::sort(all(v)); // FUCK TOPCODER
 		ei(a, v) names[ai] = a.second;
 		return names;
 	}
