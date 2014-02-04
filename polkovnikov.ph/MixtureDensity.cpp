@@ -50,12 +50,14 @@ struct MixtureDensity {
 	double getDensity(vector <string> in) {
 		int tv = 0, tm = 0;
 		ei(a, in) {
-			stst ss;
-			ss << a;
+			int pos = a.find(",");
+			stst ss, tt;
+			ss << a.substr(0, pos);
+			tt << a.substr(pos + 1);
 			int v, m;
 			string s;
-			ss >> v >> s >> s >> s >> s >> m;
-			cout << v << ' ' << m << endl;
+			ss >> v;
+			tt >> s >> m;
 			tv += v;
 			tm += m;
 		}
