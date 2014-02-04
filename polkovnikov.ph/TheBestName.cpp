@@ -48,18 +48,14 @@ using namespace std;
 
 struct TheBestName {
 	vector <string> sort(vector <string> names) {
-		vector<pair<int, string>> v;
-		auto sum = [](const string & s) {
-			int r = 0;
-			ei(a, s) r += a - 'A';
-			return r;
+		auto sum = [](string const & s) {
+			int t = 0;
+			ei(a, s) t += a - 'A';
+			return t;
 		};
-		ei(a, names) {
-			v.eb(a == "JOHN" ? big : sum(a), a);
-		}
-		std::sort(all(v)); // FUCK TOPCODER
-		rev(v);
-		ei(a, v) names[ai] = a.second;
+		std::sort(all(names), [sum](const string & a, const string & b) {
+			return a == "JOHN" || sum(a) > sum(b) || (sum(a) == sum(b) && a < b);
+		});
 		return names;
 	}
 };
