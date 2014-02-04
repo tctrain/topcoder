@@ -51,7 +51,7 @@ struct TheBestName {
 		vt(int, string) v;
 		auto sum = [](const string & s) {
 			int r = 0;
-			ei(a, s) r += s - 'A';
+			ei(a, s) r += a - 'A';
 			return r;
 		};
 		ei(a, names) {
