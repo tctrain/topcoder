@@ -53,7 +53,7 @@ struct MirroredClock {
 		int h, m;
 		char c;
 		ss >> h >> c >> m;
-		h = (12 - h) % 12 + (m != 0);
+		h = (12 - h) % 12 - (m != 0);
 		m = (60 - m) % 60;
 		stst tt;
 		if (h < 10) tt << '0';
