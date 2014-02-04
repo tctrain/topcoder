@@ -54,8 +54,8 @@ struct CondorcetVoting {
 			fr(j, cc) {
 				int c = 0;
 				ei(k, votes) {
-					if (k[i] < k[j]) --c;
-					if (k[i] > k[j]) ++c;
+					if (k[i] < k[j]) ++c;
+					if (k[i] > k[j]) --c;
 				}
 				if (c <= 0) {
 					f = false;
