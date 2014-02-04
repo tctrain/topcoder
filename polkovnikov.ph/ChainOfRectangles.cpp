@@ -52,6 +52,7 @@ struct ChainOfRectangles {
 		int total[3] = {};
 		ei(w, width) {
 			int s = w * height[wi];
+			cout << color[wi] << ' ' << s - ps << endl;
 			total[string("RGB").find(color[wi])] += s - ps;
 			ps = s;
 		}
