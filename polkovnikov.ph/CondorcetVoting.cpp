@@ -51,13 +51,12 @@ struct CondorcetVoting {
 		const int cc = sz(votes[0]);
 		fr(i, cc) {
 			bool f = true;
-			fr(j, cc) {
+			fr(j, cc) if (i != j) {
 				int c = 0;
 				ei(k, votes) {
 					if (k[i] < k[j]) ++c;
 					if (k[i] > k[j]) --c;
 				}
-				cout << i << " " << c << " " << j << endl;
 				if (c <= 0) {
 					f = false;
 					break;
