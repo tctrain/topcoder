@@ -51,12 +51,12 @@ struct LuckyTicketSubstring {
 		int mx = 0;
 		const int q = sz(s);
 		for (int i = 2; i <= sz(s); i += 2) {
-			int s = 0;
 			for (int j = 0; j < q - i; ++j) {
-				s += j < i / 2 ? 1 : -1;
-			}
-			if (s == 0) {
-				mx = max(mx, i);
+				int t = 0;
+				for (int k = j; k < j + i; ++k)
+					t += (j < i / 2 ? 1 : -1) * s[k];
+				if (t == 0)
+					mx = max(mx, i);
 			}
 		}
 		return mx;
