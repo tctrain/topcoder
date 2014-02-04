@@ -52,7 +52,7 @@ struct TwoRotationCypher {
 		ei(a, message) {
 			if (a == ' ') {
 				r += a;
-			} if (a < 'a' + firstSize) {
+			} else if (a < 'a' + firstSize) {
 				r += (a - 'a' + firstRotate) % firstSize + 'a';
 			} else {
 				r += (a - 'a' - firstSize + secondRotate) % (26 - firstSize) + firstSize + 'a';
