@@ -52,8 +52,8 @@ struct DietPlan {
 		ei(a, diet) ++c[a - 'A'];
 		string s = breakfast + lunch;
 		ei(a, s) {
-			if (diet[a - 'A'] > 0) {
-				--diet[a - 'A'];
+			if (c[a - 'A'] > 0) {
+				--c[a - 'A'];
 			} else {
 				return "CHEATER";
 			}
