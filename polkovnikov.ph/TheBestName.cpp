@@ -54,7 +54,7 @@ struct TheBestName {
 			return t;
 		};
 		std::sort(all(names), [sum](const string & a, const string & b) {
-			return a == "JOHN" || sum(a) > sum(b) || (sum(a) == sum(b) && a < b);
+			return a == "JOHN"  && b != "JOHN" || sum(a) > sum(b) || (sum(a) == sum(b) && a < b);
 		});
 		return names;
 	}
