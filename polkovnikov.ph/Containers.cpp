@@ -50,12 +50,10 @@ struct Containers {
 	int wastedSpace(vector <int> r, vector <int> packages) {
 		int c = 0;
 		ei(a, packages) {
-			if (a > r[c]) {
+			while (a > r[c]) {
 				++c;
-			} else {
-				r[c] -= a;
 			}
-			dump(r); cout << endl;
+			r[c] -= a;
 		}
 		int w = 0;
 		ei(a, r) w += a;
