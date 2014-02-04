@@ -61,6 +61,7 @@ struct MorselikeCode {
 		string s;
 		string r;
 		while (ss >> s) {
+			cout << s << endl;
 			r += m[s] == 0 ? '?' : m[s];
 		}
 		return r;
