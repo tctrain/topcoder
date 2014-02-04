@@ -50,7 +50,7 @@ struct LuckyTicketSubstring {
 	int maxLength(string s) {
 		const int q = sz(s);
 		int mx = 0;
-		for (int i = 0; i < q; ++i) for (int j = i + 2; j < q; ++j) if ((j - i) % 2 == 0) {
+		for (int i = 0; i < q; ++i) for (int j = i + 2; j <= q; ++j) if ((j - i) % 2 == 0) {
 			int m = (j - i) / 2;
 			int t = 0;
 			for (int k = i; k < m; ++k) t += s[k] - '0';
