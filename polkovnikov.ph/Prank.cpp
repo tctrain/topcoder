@@ -49,7 +49,7 @@ using namespace std;
 struct Prank {
 	vector <int> realWeight(int g) {
 		const int q = sqrt(g);
-		vector<int> r
+		vector<int> r;
 		for (int i = 1; i <= q; ++i) for (int j = i; j <= q; ++j) {
 			r.eb(j * j - i * i);
 		}
