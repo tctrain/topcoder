@@ -49,23 +49,17 @@ using namespace std;
 struct ContiguousSubsequences {
 	vector <int> findMaxAverage(vector <int> x, int K) {
 		double mx = 0;
-		int aii = big, bii = 0;
+		vt(double, int, int, int) v;
 		ei(a, x) ei(b, x) if (ai <= bi && bi - ai + 1 >= K) {
 			int n = 0;
 			for (int i = ai; i <= bi; ++i) {
 				n += x[i];
 			}
 			double f = double(n) / (bi - ai + 1);
-			if (mx < f) {
-				mx = f;
-				aii = ai;
-				bii = bi;
-			} else if (mx == f && ai < aii) {
-				aii = ai;
-				bii = bi;
-			}
+			v.eb(-f, -(bi - ai + 1), ai, bi);
 		}
-		return {aii, bii};
+		sr(v);
+		return {g(v[]0,2), g(v[0],3)};
 	}
 };
 
