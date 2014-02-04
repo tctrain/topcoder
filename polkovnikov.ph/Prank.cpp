@@ -51,11 +51,18 @@ struct Prank {
 		const int q = g;
 		vector<int> r;
 		int c = 0;
-		for (int i = 1; i <= q; ++i) for (int j = i; j <= q; ++j) {
-			if (j * j - i * i != g) continue;
-			r.eb(j);
+		for (int i = 1; ; ++i) {
+			bool f = false;
+			for (int j = i; ; ++j) {
+				int d = j * j - i * i;
+				if (d == g) r.eb(j);
+				if (d > g) break;
+				f = true;
+			}
+			if (!f) break;
 		}
 		sr(r);
+		uni(r);
 		return r;
 	}
 };
