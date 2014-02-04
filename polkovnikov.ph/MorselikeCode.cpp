@@ -53,8 +53,8 @@ struct MorselikeCode {
 			stst ss;
 			char c;
 			string s;
+			ss << a;
 			ss >> c >> s;
-			cout << s << endl;
 			m[s] = c;
 		}
 		stst ss;
