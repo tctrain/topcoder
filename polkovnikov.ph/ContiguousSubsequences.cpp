@@ -50,7 +50,7 @@ struct ContiguousSubsequences {
 	vector <int> findMaxAverage(vector <int> x, int K) {
 		double mx = 0;
 		int aii = 0, bii = 0;
-		ei(a, x) ei(b, x) if (ai < bi && bi - ai + 1 >= K) {
+		ei(a, x) ei(b, x) if (ai <= bi && bi - ai + 1 >= K) {
 			int n = 0;
 			for (int i = ai; i <= bi; ++i) {
 				n += x[i];
