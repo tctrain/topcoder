@@ -46,16 +46,23 @@
 typedef long long ll;
 using namespace std;
 
-struct CyclicWords {
-	int differentCW(vector <string> words) {
-		set<string> s;
+struct AzimuthMonitoring {
+	int getAzimuth(vector <string> in) {
 		int c = 0;
-		ei(a, words) {
-			if (s.find(a) != s.end()) continue;
-			++c;
-			ei(b, a) s.insert(a.substr(bi) + a.substr(0, bi));
+		ei(a, in) {
+			if (a == "LEFT") c += 90;
+			else if (a == "RIGHT") c -= 90;
+			else if (a == "TURN AROUND") c += 180;
+			else if (a == "HALT") break;
+			else {
+				stst ss;
+				ss << a;
+				string u; int v;
+				ss >> u >> v;
+				c += u == "LEFT" ? v : -v;
+			}
 		}
-		return c;
+		return (c % 360 + 360) % 360;
 	}
 };
 
@@ -77,11 +84,11 @@ bool KawigiEdit_RunTest(int testNum, vector <string> p0, bool hasAnswer, int p1)
 	}
 	cout << "}";
 	cout << "]" << endl;
-	CyclicWords *obj;
+	AzimuthMonitoring *obj;
 	int answer;
-	obj = new CyclicWords();
+	obj = new AzimuthMonitoring();
 	clock_t startTime = clock();
-	answer = obj->differentCW(p0);
+	answer = obj->getAzimuth(p0);
 	clock_t endTime = clock();
 	delete obj;
 	bool res;
@@ -121,25 +128,49 @@ int main() {
 	
 	// ----- test 0 -----
 	disabled = false;
-	p0 = {"picture","turepic","icturep","word","ordw"};
-	p1 = 2;
+	p0 = {"RIGHT"};
+	p1 = 90;
 	all_right = (disabled || KawigiEdit_RunTest(0, p0, true, p1) ) && all_right;
 	tests_disabled = tests_disabled || disabled;
 	// ------------------
 	
 	// ----- test 1 -----
 	disabled = false;
-	p0 = {"ast","ats","tas","tsa","sat","sta","ttt"};
-	p1 = 3;
+	p0 = {"LEFT","LEFT","TURN AROUND"};
+	p1 = 0;
 	all_right = (disabled || KawigiEdit_RunTest(1, p0, true, p1) ) && all_right;
 	tests_disabled = tests_disabled || disabled;
 	// ------------------
 	
 	// ----- test 2 -----
 	disabled = false;
-	p0 = {"aaaa","aaa","aa","aaaa","aaaaa"};
-	p1 = 4;
+	p0 = {"LEFT 5","RIGHT 10","LEFT 15","RIGHT 20","LEFT 25","RIGHT 30","LEFT 35","RIGHT 40"};
+	p1 = 20;
 	all_right = (disabled || KawigiEdit_RunTest(2, p0, true, p1) ) && all_right;
+	tests_disabled = tests_disabled || disabled;
+	// ------------------
+	
+	// ----- test 3 -----
+	disabled = false;
+	p0 = {"RIGHT 59","RIGHT","RIGHT","HALT","LEFT","LEFT","LEFT"};
+	p1 = 239;
+	all_right = (disabled || KawigiEdit_RunTest(3, p0, true, p1) ) && all_right;
+	tests_disabled = tests_disabled || disabled;
+	// ------------------
+	
+	// ----- test 4 -----
+	disabled = false;
+	p0 = {"TURN AROUND","HALT","LEFT 5","HALT","LEFT 5","HALT"};
+	p1 = 180;
+	all_right = (disabled || KawigiEdit_RunTest(4, p0, true, p1) ) && all_right;
+	tests_disabled = tests_disabled || disabled;
+	// ------------------
+	
+	// ----- test 5 -----
+	disabled = false;
+	p0 = {"LEFT","LEFT","LEFT","LEFT","LEFT","HALT"};
+	p1 = 270;
+	all_right = (disabled || KawigiEdit_RunTest(5, p0, true, p1) ) && all_right;
 	tests_disabled = tests_disabled || disabled;
 	// ------------------
 	
