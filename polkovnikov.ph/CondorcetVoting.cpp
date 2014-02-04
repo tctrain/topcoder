@@ -62,6 +62,7 @@ struct CondorcetVoting {
 					break;
 				}
 			}
+			cout << i << " preferred to " << j << endl;
 			if (f) return i;
 		}
 		return -1;
