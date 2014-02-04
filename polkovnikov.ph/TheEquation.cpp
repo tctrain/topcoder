@@ -51,6 +51,7 @@ struct TheEquation {
 		fr(i, 2 * P + 1) {
 			fr(j, i) {
 				int k = i - j;
+				if (j < 0 || k < 0)
 				cout << j << ' ' << k << endl;
 				if ((j * X + k * Y) % P == 0) {
 					return i;
