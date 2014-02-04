@@ -55,6 +55,7 @@ struct PunctuationCleaner {
 				if (a == '?') qu = true; else ex = true;
 			} else {
 				if (qu) r += '?'; else if (ex) r += '!';
+				ex = qu = false;
 				r += a;
 			}
 		}
