@@ -56,7 +56,11 @@ struct MirroredClock {
 		h = (12 - h) % 12;
 		m = (60 - m) % 60;
 		stst tt;
-		tt << h << c << m;
+		if (h < 10) tt << '0';
+		tt << h;
+		tt << c;
+		if (m < 10) tt << '0';
+		tt << m;
 		string sime;
 		getline(tt, sime);
 		return sime;
