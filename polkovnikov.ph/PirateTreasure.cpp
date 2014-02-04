@@ -49,7 +49,7 @@ using namespace std;
 struct PirateTreasure {
 	double getDistance(vector <int> steps, vector <string> directions) {
 		double const d = sqrt(2.0) / 2.0;
-		int dx[] = {1, d, 0, -d, -1, -d, 0, d}, dy[] = {0, d, 1, d, 0, -d, -1, -d};
+		double dx[] = {1, d, 0, -d, -1, -d, 0, d}, dy[] = {0, d, 1, d, 0, -d, -1, -d};
 		map<string, int> ds {
 			{"NORTH", 0},
 			{"NORTHEAST", 1},
