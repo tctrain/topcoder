@@ -49,7 +49,7 @@ using namespace std;
 struct HockeyFault {
 	int numPlayers(int width, int height, int x, int y, vector <int> px, vector <int> py) {
 		int c = 0;
-		ei(x1, px) { int y1 = py[xi];
+		ei(x1, px) { int y1 = py[x1i];
 			auto sq = [](int x) { return x * x; };
 			if (
 				sq(x - x1) + sq(y + height / 2 - y1) <= sq(height / 2) ||
