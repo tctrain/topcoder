@@ -58,7 +58,7 @@ struct TheBestName {
 			if (b == "JOHN") return true;
 			int d = sum(b) - sum(a);
 			if (d > 0) return false;
-			if (a < 0) return true;
+			if (d< 0) return true;
 			return a < b;
 		});
 		return names;
