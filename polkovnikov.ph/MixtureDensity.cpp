@@ -55,6 +55,7 @@ struct MixtureDensity {
 			int v, m;
 			string s;
 			ss >> v >> s >> s >> s >> s >> m;
+			cout << v << ' ' << m << endl;
 			tv += v;
 			tm += m;
 		}
