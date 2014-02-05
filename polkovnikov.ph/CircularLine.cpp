@@ -52,10 +52,11 @@ struct CircularLine {
 		fr(i,2) copy(all(t), back_inserter(u));
 		int mx = 0;
 		ei(b, u) ei(a, u) {
-			if (a > b) break;
 			int d = abs(ai - bi);
 			if (d == 0 || d >= sz(t)) continue;
-			mx = max(mx, abs(b - a));
+			int s = 0;
+			for (int i = ai; i <= bi; ++i) s += u[i];
+			mx = max(mx, s);
 		}
 		return mx;
 	}
