@@ -50,7 +50,7 @@ struct VerifyCreditCard {
 	string checkDigits(string cn) {
 		int s = 0;
 		ei(a, cn) {
-			int d = (a - '0') * ((ai % 2 == 0) ^ sz(cn) ? 2 : 1);
+			int d = (a - '0') * ((ai % 2) ^ (sz(cn) % 2) ? 2 : 1);
 			cout << d << endl;
 			s += d % 10 + d / 10;
 		}
