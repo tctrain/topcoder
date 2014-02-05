@@ -50,17 +50,15 @@ struct TrophyShelf {
 	vector <int> countVisible(vector <int> t) {
 		int c[2] = {};
 		fr(i, 2) {
-			int k = big;
+			int k = 0;
 			int mx = 0;
-			rev(t);
 			ei(a, t) {
-				if (k < mx) {
+				if (k > mx) {
 					++k;
-				} else {
-					k = 1;
 				}
 				mx = max(k, mx);
 			}
+			rev(t);
 			c[i] = k;
 		}
 		return {c[0], c[1]};
