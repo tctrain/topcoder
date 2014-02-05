@@ -48,8 +48,6 @@ using namespace std;
 
 struct FingerCounting {
 	int maxNumber(int weakFinger, int maxCount) {
-		int d[] = {0, 1, 2, 3, 4, 3, 2, 1};
-		int d[] = {0, 1, 2, 3, 4, 3, 2, 1};
 		if (weakFinger % 4 == 0) {
 			return maxCount * 8 + weakFinger;
 		} else if (maxCount % 2 == 1) {
