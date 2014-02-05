@@ -50,6 +50,7 @@ struct MinDifference {
 	int closestElements(int A0, int X, int Y, int M, int n) {
 		vector<int> v(A0);
 		int mn = big;
+		cout << v.back() << endl;
 		for (int i = 1; i <= n - 1; ++i) {
 			int t = (v.back() * X + Y) % M;
 			if (i < 10) cout << t << ' ';
