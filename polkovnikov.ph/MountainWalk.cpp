@@ -52,17 +52,17 @@ struct MountainWalk {
 		int w = sz(m), h = sz(m[0]);
 		int dx[] = {1, 0, -1, 0}, dy[] = {0, -1, 0, 1};
 		int c = 1;
+		vector<string> t = m;
 		for (;;) {
 			bool f = true;
 			fr(i, 4) {
 				int nx = x + dx[i];
 				int ny = y + dy[i];
 				cout << '-' << abs(m[x][y] - m[nx][ny]) << endl;
-				if (0 <= nx && nx < w && 0 <= ny && ny < h && m[nx][ny] != '-' && abs(m[x][y] - m[nx][ny]) <= k) {
-					cout << nx << ' ' << ny << endl;
+				if (0 <= nx && nx < w && 0 <= ny && ny < h && t[nx][ny] != '-' && abs(m[x][y] - m[nx][ny]) <= k) {
 					x = nx;
 					y = ny;
-					m[x][y] = '-';
+					t[x][y] = '-';
 					++c;
 					f = false;
 					break;
