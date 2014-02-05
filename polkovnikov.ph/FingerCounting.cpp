@@ -48,7 +48,8 @@ using namespace std;
 
 struct FingerCounting {
 	int maxNumber(int weakFinger, int maxCount) {
-		return maxCount / (weakFinger % 4 == 0 ? 8 : 4) + weakFinger;
+		int d = weakFinger % 4 == 0 ? 8 : 4;
+		return maxCount / d * d + weakFinger;
 	}
 };
 
