@@ -48,10 +48,10 @@ using namespace std;
 
 struct MonotoneSequence {
 	int longestMonotoneSequence(vector <int> seq) {
-		int c = 0, d = 0, mx = 0;
+		int c = 1, d = 1, mx = 0;
 		ei(a, seq) if (ai > 0) {
-			if (a > seq[ai - 1]) ++c; else {mx=max(mx, c);c = 0;}
-			if (a < seq[ai - 1]) ++d; else {mx=max(mx, d);d = 0;}
+			if (a > seq[ai - 1]) ++c; else {mx=max(mx, c);c = 1;}
+			if (a < seq[ai - 1]) ++d; else {mx=max(mx, d);d = 1;}
 		}
 		mx=max(mx, c);
 		mx=max(mx, d);
