@@ -59,6 +59,7 @@ struct TrophyShelf {
 				} else {
 					k = 1;
 				}
+				mx = max(k, mx);
 			}
 			c[i] = k;
 		}
