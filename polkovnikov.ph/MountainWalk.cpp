@@ -53,6 +53,7 @@ struct MountainWalk {
 		int dx[] = {1, 0, -1, 0}, dy[] = {0, -1, 0, 1};
 		int c = 1;
 		vector<string> t = m;
+		t[0][0] = '-';
 		for (;;) {
 			bool f = true;
 			fr(i, 4) {
