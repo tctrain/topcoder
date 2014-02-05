@@ -50,7 +50,14 @@ struct FingerCounting {
 	int maxNumber(int weakFinger, int maxCount) {
 		int d[] = {0, 1, 2, 3, 4, 3, 2, 1};
 		int d[] = {0, 1, 2, 3, 4, 3, 2, 1};
-		int d = weakFinger % 4 == 0 ? 8 : 4;
+		if (weakFinger % 4 == 0) {
+			return maxCount * 8 + weakFinger;
+		} else if (maxCount % 2 == 1) {
+			return (maxCount - 1) * 4 + weakFinger + 1;
+		} else if (maxCount != 0) {
+			return maxCount * 4 - weakFinger + 1;
+		} else return 0;
+		int d =  ? 8 : 4;
 		return maxCount * d + weakFinger;
 	}
 };
