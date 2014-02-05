@@ -52,7 +52,7 @@ struct MinDifference {
 		int mn = big;
 		for (int i = 1; i <= n - 1; ++i) {
 			int n = (p * X + Y) % M;
-			cout << n << endl;
+			if (i < 10) cout << n << endl;
 			mn = min(mn, abs(n - p));
 			p = n;
 		}
