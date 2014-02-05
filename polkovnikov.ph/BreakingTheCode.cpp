@@ -58,7 +58,7 @@ struct BreakingTheCode {
 			stst ss;
 			ei(a, m) {
 				int x = code.find(a);
-				ss << x / 10 + '0' << x % 10 + '0';
+				ss << char(x / 10 + '0') << char(x % 10 + '0');
 			}
 			getline(ss, r);
 		}
