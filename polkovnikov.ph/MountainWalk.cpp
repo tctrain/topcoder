@@ -57,6 +57,7 @@ struct MountainWalk {
 			fr(i, 4) {
 				int nx = x + dx[i];
 				int ny = y + dy[i];
+				cout << '-' << abs(m[x][y] - m[nx][ny]) << endl;
 				if (0 <= nx && nx < w && 0 <= ny && ny < h && m[nx][ny] != '-' && abs(m[x][y] - m[nx][ny]) <= k) {
 					cout << nx << ' ' << ny << endl;
 					x = nx;
