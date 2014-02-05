@@ -51,7 +51,7 @@ struct SnowyWinter {
 		vector<int> m(10001);
 		ei(a, s) {
 			int b = e[ai];
-			for (int i = a; i <= b; ++i) {
+			for (int i = a; i < b; ++i) {
 				m[i] = 1;
 			}
 		}
