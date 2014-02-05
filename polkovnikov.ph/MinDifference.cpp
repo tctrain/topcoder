@@ -48,14 +48,13 @@ using namespace std;
 
 struct MinDifference {
 	int closestElements(int A0, int X, int Y, int M, int n) {
-		int p = A0;
+		vector<int> v(A0);
 		int mn = big;
 		for (int i = 1; i <= n - 1; ++i) {
-			int n = (p * X + Y) % M;
-			if (i < 10) cout << n << endl;
-			mn = min(mn, abs(n - p));
-			p = n;
+			v.push_back((v.back() * X + Y + M) % M);
 		}
+		sr(v);
+		ei(a, v) if (ai > 0) mn = min(mn, abs(a - v[ai - 1]));
 		return mn;
 	}
 };
