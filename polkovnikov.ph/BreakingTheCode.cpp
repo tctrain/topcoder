@@ -52,12 +52,12 @@ struct BreakingTheCode {
 		if (isdigit(m[0])) {
 			ei(a, m) if (ai % 2) {
 				int p = m[ai - 1];
-				r += code[(p - '0') * 10 + a - '0'];
+				r += code[(p - '0') * 10 + a - '0' - 1];
 			}
 		} else {
 			stst ss;
 			ei(a, m) {
-				int x = code.find(a);
+				int x = code.find(a) + 1;
 				ss << char(x / 10 + '0') << char(x % 10 + '0');
 			}
 			getline(ss, r);
