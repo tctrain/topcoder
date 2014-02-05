@@ -56,7 +56,7 @@ struct AverageCandyLifetime {
 			s += t * a;
 			u += a;
 		}
-		return double(t) / u;
+		return double(s) / u;
 	}
 };
 
