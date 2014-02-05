@@ -50,7 +50,7 @@ struct GuessingNextElement {
 	int guess(vector <int> A) {
 		bool arith = true;
 		bool d = A[1] - A[0];
-		ei(a, A) if (ai > 0 && A[i] - A[i - 1] != d) { arith = false; break; }
+		ei(a, A) if (ai > 0 && a - A[ai - 1] != d) { arith = false; break; }
 		if (arith) {
 			return A[0] + (sz(A) - 1) * (A[1] - A[0])
 		} else {
