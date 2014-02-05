@@ -35,7 +35,7 @@ using namespace std;
 struct VariableSpeedLimit {
 	double journeyTime(int jl, vector <int> s) {
 		int t = 0;
-		fr(i, jl) {
+		fr(i, jl + 1) {
 			int j = s[i % sz(s)];
 			if (jl >= j) {
 				jl -= j;
