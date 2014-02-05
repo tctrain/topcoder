@@ -51,8 +51,10 @@ struct MinDifference {
 		vector<int> v(A0);
 		int mn = big;
 		for (int i = 1; i <= n - 1; ++i) {
-			v.push_back((v.back() * X + Y + M) % M);
-		}
+			int n = (v.back() * X + Y) % M;
+			if (i < 10) cout << n << ' ';
+			v.push_back(n);
+		} cout << endl;
 		sr(v);
 		ei(a, v) if (ai < 10) cout << a << endl;
 		ei(a, v) if (ai > 0) mn = min(mn, abs(a - v[ai - 1]));
