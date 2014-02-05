@@ -55,8 +55,6 @@ struct FingerCounting {
 		} else if (maxCount != 0) {
 			return maxCount * 4 - weakFinger + 1;
 		} else return 0;
-		int d =  ? 8 : 4;
-		return maxCount * d + weakFinger;
 	}
 };
 
