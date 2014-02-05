@@ -51,7 +51,7 @@ struct BreakingTheCode {
 		string r;
 		if (isdigit(m[0])) {
 			ei(a, m) if (ai % 2) {
-				int p = a[ai - 1];
+				int p = m[ai - 1];
 				r += code[(p - '0') * 10 + a - '0'];
 			}
 		} else {
