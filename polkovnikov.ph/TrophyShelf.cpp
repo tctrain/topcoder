@@ -53,10 +53,10 @@ struct TrophyShelf {
 			int k = 0;
 			int mx = 0;
 			ei(a, t) {
-				if (k > mx) {
+				if (a > mx) {
 					++k;
 				}
-				mx = max(k, mx);
+				mx = max(a, mx);
 			}
 			rev(t);
 			c[i] = k;
