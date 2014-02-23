@@ -48,7 +48,7 @@ using namespace std;
 
 struct ReversedSum {
 	int getReversedSum(int x, int y) {
-		auto rev = [](int x) {
+		auto rv = [](int x) {
 			int r = 0;
 			while (x) {
 				r *= 10;
@@ -57,7 +57,7 @@ struct ReversedSum {
 			}
 			return r;
 		};
-		return rev(rev(x) + rev(y));
+		return rv(rv(x) + rv(y));
 	}
 };
 
