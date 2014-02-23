@@ -54,7 +54,7 @@ struct MultiNumber {
 			number /= 10;
 		}
 		const int q = sz(d);
-		for (int i = 1; i <= d - 1; ++i) {
+		for (int i = 1; i <= q - 1; ++i) {
 			int m1 = 1, m2 = 1;
 			for (int j = 0; j < i; ++j) m1 *= d[j];
 			for (int j = i; j < q; ++j) m2 *= d[j];
