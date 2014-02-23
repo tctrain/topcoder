@@ -51,6 +51,7 @@ struct TheSimpleGame {
 		int c = 0;
 		ei(xx, x) {
 			int yy = y[xxi - 1];
+			cout << yy << ' ' << n - yy << endl;
 			cout << min(xx - 1, n - xx) << ' ' << min(yy - 1, n - yy) << endl;
 			c += min(xx - 1, n - xx) + min(yy - 1, n - yy);
 		}
