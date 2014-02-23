@@ -50,7 +50,7 @@ struct DeckRearranging {
 	string rearrange(string deck, vector <int> above) {
 		string r;
 		ei(a, deck) {
-			r.insert(sz(r) + above[ai], string(1, a));
+			r = r.substr(0, sz(r) - above[i]) + a + r.substr(sz(r) - above[i]);
 		}
 		return r;
 	}
